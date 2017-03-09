@@ -4,7 +4,7 @@ To execute terraform command with .tf files in local directory, use the followin
 option. It mounts a current local directory to `/data` directory in a docker container.
 
 ```
-docker run -i -t -v $(pwd):/data minsikl/terraform-softlayer
+docker run -i -t --rm -v $(pwd):/data minsikl/terraform-softlayer
 ```
 
 #Links
