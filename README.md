@@ -6,6 +6,10 @@ option. It mounts a current local directory to `/data` directory in a docker con
 ```
 docker run -i -t --rm -v $(pwd):/data minsikl/terraform-softlayer
 ```
+To investigate detailed log files, configure `TF_LOG` value using `-e` option. Available values are _INFO_, _WARN_, _DEBUG_, and _TRACE_.
+```
+docker run -i -t -e TF_LOG=DEBUG --rm -v $(pwd):/data minsikl/terraform-softlayer
+```
 
 # Links
 terraform-provider-softlayer - https://github.com/softlayer/terraform-provider-softlayer
